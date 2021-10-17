@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { DatabaseModule } from './database.module';
+import { TodosModule } from './todos/todos.module';
 
 import * as Joi from 'joi';
 
@@ -20,6 +21,7 @@ import * as Joi from 'joi';
       }),
     }),
     DatabaseModule,
+    TodosModule,
   ],
   controllers: [AppController],
   providers: [AppService],
